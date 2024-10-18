@@ -1,13 +1,178 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustad Abu Bakar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css"> 
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-white">
+    <nav id="navbar" class="fixed navbar-bg w-full z-10 transition-all duration-300 ease-in-out bg-transparent">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div id="logo" class="">
+                        <a href="" class="flex items-center py-5 px-2 text-white">
+                            <span class="font-bold font-roboto">Ust. Abu Bakar, LC., M.H</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Profile</a>
+                    <div class="relative group">
+                        <button class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase flex items-center">
+                            Ponpes
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0.5 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                            <a href="#" class="block font-roboto px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Program Pesantren</a>
+                            <a href="#" class="block font-roboto px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Rutinitas Santri</a>
+                        </div>
+                    </div>
+                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Biografi</a>
+                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Artikel</a>
+                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Galery</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button" id="mobile-menu-button">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white rounded-xl shadow-xl p-4 absolute top-0 left-0 w-full z-20" id="mobile-menu">
+            <div class="flex justify-between items-center">
+                <div id="mobile-logo" class="hidden md:block">
+                    <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                        <span class="font-bold">Ust. Abu Bakar, LC., M.H</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-button-close" id="mobile-menu-button-close">
+                    <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Profile</a>
+            <div class="relative">
+                <button class="mobile-submenu-button w-full text-left font-roboto py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 uppercase flex items-center justify-between">
+                    Ponpes
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="mobile-submenu hidden bg-gray-100">
+                    <a href="#" class="block py-2 px-8 font-roboto text-sm text-gray-700 hover:bg-gray-200">Program Pesantren</a>
+                    <a href="#" class="block py-2 px-8 font-roboto text-sm text-gray-700 hover:bg-gray-200">Rutinitas Santri</a>
+                </div>
+            </div>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Biografi</a>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Artikel</a>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Galery</a>
+        </div>
+    </nav>
+    
+    <section class="container mx-auto mt-10 ">
+        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
+                <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
+                PROFIL
+            </h2>
+            <p class="text-gray-600 font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla id bibendum luctus, felis ligula cursus magna, eu tincidunt nibh urna vitae eros. Donec ut ultricies est, sit amet pretium erat. Proin id sem sed neque mattis porta.</p>
+        </div>
+
+
+        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
+                <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
+                DAKWAH
+            </h2>
+            <div class="mt-4 mx-auto flex justify-center space-x-4">
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/vhrdYTP4AiY?si=6VaxFTQLTZDttc_2" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/My3b6OZ1adE?si=hMQYMQ6MnqpfewNl" title="YouTube video player"
+                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>            
+        </div>
+
+        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
+                <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
+                JADWAL PENGAJIAN
+            </h2>
+            <p class="text-gray-600 font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla id bibendum luctus, felis ligula cursus magna, eu tincidunt nibh urna vitae eros. Donec ut ultricies est, sit amet pretium erat. Proin id sem sed neque mattis porta.</p>
+        </div>
+
+
+        <footer class="bg-gray-800 text-white ">
+                <div class="container mx-auto px-4 py-10 flex">
+                    <div class="flex flex-col space-y-4 mx-8">
+                        <h1 class="text-2xl font-bold">Beranda</h1>
+                        <h2 class="text-xl ">Profile</h2>
+                        <h2 class="text-xl ">Dakwah</h2>
+                        <h2 class="text-xl ">Jadwal Pengajian</h2>
+                        <h2 class="text-xl ">Media</h2>
+                    </div>
+                    <div class="">
+                        <h3 class="text-2xl font-bold">Social Media</h3>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="bg-white hover:bg-gray-300 text-white font-bold p-4 rounded-full">
+                                <img src="public/facebook.svg" alt="">
+                            </a>
+                            <a href="#" class="bg-white hover:bg-gray-300 text-white font-bold p-4 rounded-full">
+                                <img src="public/instagram.svg" alt="">
+                            </a>
+                            <a href="#" class="bg-white hover:bg-gray-300 text-white font-bold p-4 rounded-full">
+                                <img src="public/youtube.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>   
+             </footer>
+
+    <script>
+        // Mengatur efek scroll
+        const fadeIns = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        fadeIns.forEach(fadeIn => {
+            observer.observe(fadeIn);
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar-bg');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+
 </body>
 </html>
