@@ -51,7 +51,7 @@ body {
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 
 .fade-in.visible {
@@ -70,4 +70,9 @@ body {
     white-space: nowrap; /* Prevent line breaks */
     overflow: hidden; /* Hide overflow */
     text-align: center; /* Center text */
+}
+.scrolled {
+    background-color: rgb(0, 0, 0); /* Latar belakang gelap saat di-scroll */
+    position: fixed;
+    width: 100%;
 }
