@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body class="bg-white">
-    <nav id="navbar" class="fixed w-full flex justify-center navbar-bg  z-10 transition-all duration-300 ease-in-out">
-        <div class="max-w-6xl mx-auto roti">
-            <div class="flex justify-between items-center">
+    <nav id="navbar" class="fixed w-full flex justify-center navbar-bg  z-[999] transition-all duration-300 ease-in-out">
+        <div class="mx-auto roti">
+            <div class="flex justify-center items-center z-[999]" >
                 <div class="flex space-x-4">
                     <!-- Logo -->
                     <!-- <div id="logo" class="">
@@ -23,10 +23,10 @@
                 
                 <!-- Desktop menu -->
                 <div class=" flex justify-center items-center space-x-1 ">
-                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Profile</a>
-                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Dakwah</a>
-                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Jadwal Dakwah</a>
-                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Galery</a>
+                    <a href="#profil" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Profil</a>
+                    <a href="#dakwah" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Dakwah</a>
+                    <a href="#jadwal" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Jadwal Dakwah</a>
+                    <a href="#media" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Galery</a>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -37,17 +37,13 @@
                         </svg>
                     </button>
                 </div>
+                <div class="text-center mt-4 mb-4">
+                </div>
             </div>
         </div>
-        
         <!-- Mobile menu -->
         <div class="mobile-menu hidden md:hidden bg-white rounded-xl shadow-xl p-4 absolute top-0 left-0 w-full z-20" id="mobile-menu">
             <div class="flex justify-between items-center">
-                <div id="mobile-logo" class="hidden md:block">
-                    <a href="#" class="flex items-center py-5 px-2 text-gray-700">
-                        <span class="font-bold">Ust. Abu Bakar, LC., M.H</span>
-                    </a>
-                </div>
                 <button class="mobile-menu-button-close" id="mobile-menu-button-close">
                     <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -57,24 +53,20 @@
             <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Profile</a>
             <div class="relative">
                 <button class="mobile-submenu-button w-full text-left font-roboto py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 uppercase flex items-center justify-between">
-                    Ponpes
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-submenu hidden bg-gray-100">
-                    <a href="#" class="block py-2 px-8 font-roboto text-sm text-gray-700 hover:bg-gray-200">Program Pesantren</a>
-                    <a href="#" class="block py-2 px-8 font-roboto text-sm text-gray-700 hover:bg-gray-200">Rutinitas Santri</a>
-                </div>
-            </div>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Biografi</a>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Artikel</a>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Galery</a>
-        </div>
+
     </nav>
+
+    <div>
+        <h1 class="text-overlay mt-20">Ust. Abu Bakar, LC., M.H</h1>
+    </div>
     
-    <section class="container mx-auto mt-10 ">
-        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+    
+    <section class="container mx-auto mt-10 -z-10">
+        <div id="profil" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 PROFIL
@@ -83,32 +75,62 @@
         </div>
 
 
-        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+        <div id="dakwah" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 DAKWAH
             </h2>
             <div class="mt-4 mx-auto flex justify-center space-x-4">
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/vhrdYTP4AiY?si=6VaxFTQLTZDttc_2" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/My3b6OZ1adE?si=hMQYMQ6MnqpfewNl" title="YouTube video player"
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <iframe width="500" height="315" src="https://www.youtube.com/embed/vCYBm44aG8w?si=MzvtTZFoKFa_mlm8" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="text-gray-600 font-bold mt-2">Fikih Kurban</p>
+                </div>
+                <div>
+                    <iframe width="500" height="315" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="text-gray-600 font-bold mt-2">Zakat</p>
+                </div>
             </div>            
         </div>
 
-        <div class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+        <div id="jadwal" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 JADWAL PENGAJIAN
             </h2>
-            <p class="text-gray-600 font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla id bibendum luctus, felis ligula cursus magna, eu tincidunt nibh urna vitae eros. Donec ut ultricies est, sit amet pretium erat. Proin id sem sed neque mattis porta.</p>
-        </div>
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr class="w-full text-white bg-green-700">
+                            <th class="py-2 px-4 border-b">Tanggal</th>
+                            <th class="py-2 px-4 border-b">Waktu</th>
+                            <th class="py-2 px-4 border-b">Tempat</th>
+                            <th class="py-2 px-4 border-b">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="py-2 px-4 border-b">2024-10-30</td>
+                            <td class="py-2 px-4 border-b">19:00</td>
+                            <td class="py-2 px-4 border-b">Masjid Al-Falah</td>
+                            <td class="py-2 px-4 border-b">Pengajian Umum</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">2024-11-05</td>
+                            <td class="py-2 px-4 border-b">18:00</td>
+                            <td class="py-2 px-4 border-b">Aula Sekolah</td>
+                            <td class="py-2 px-4 border-b">Kajian Anak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         </div>
 
 
         <footer class="bg-gray-800 text-white ">
-                <div class="container mx-auto px-4 py-10 flex">
+                <div id="media" class="container mx-auto px-4 py-10 flex">
                     <div class="flex flex-col space-y-4 mx-8">
                         <h1 class="text-2xl font-bold">Beranda</h1>
                         <h2 class="text-xl ">Profile</h2>
@@ -132,6 +154,7 @@
                     </div>
                 </div>   
              </footer>
+    </section>
 
     <script>
                 const mobileMenuButton = document.getElementById('mobile-menu-button');
