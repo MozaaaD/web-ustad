@@ -15,52 +15,46 @@
 </head>
 <body class="bg-white">
     <nav id="navbar" class="fixed w-full flex justify-center navbar-bg z-[999] transition-all duration-300 ease-in-out">
-        <div class="mx-auto roti">
-            <div class="flex justify-center items-center z-[999]">
-                <div class="flex space-x-4">
-                    <!-- Logo -->
-                    <!-- <div id="logo" class="">
-                        <a href="" class="flex items-center py-5 px-2 text-white">
-                            <span class="font-bold font-roboto">Ust. Abu Bakar, LC., M.H</span>
-                        </a>
-                    </div>
-                </div> -->
+        <div class="roti">
+            <div class="flex justify-between items-center z-[999] w-full">
+                <!-- Logo Text -->
+                <div class="flex items-center">
+                    <span class="text-white font-bold text-lg md:text-xl">Ustad Abu Bakar, L.C., M.H</span>
+                </div>
 
                 <!-- Desktop menu -->
                 <div class="flex justify-end items-center space-x-1" style="z-index: 999999999;">
                     <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Beranda</a>
-                    <a href="#profil" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Profil</a>
-                    <a href="#dakwah" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Dakwah</a>
-                    <a href="#jadwal" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Jadwal Dakwah</a>
-                    <a href="#media" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Media</a>
+                    <a href="#profil" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Profil</a>
+                    <a href="#dakwah" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Dakwah</a>
+                    <a href="#jadwal" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Jadwal Dakwah</a>
+                    <a href="#media" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Media</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="flex justify-end">
-                    <div class="md:hidden flex items-center" style="z-index: 999999999;">
-                        <button class="mobile-menu-button" id="mobile-menu-button">
-                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
+                <div class="flex justify-end items-center space-x-1" style="z-index: 999999999;">
+                    <button class="mobile-menu-button" id="mobile-menu-button">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white rounded-xl shadow-xl p-4 absolute top-16 left-0 w-full z-20" id="mobile-menu">
+        <div class="mobile-menu hidden md:hidden fixed bg-white rounded-xl shadow-xl p-4 left-0 w-full z-20" id="mobile-menu">
             <div class="flex justify-between items-center">
                 <button class="mobile-menu-button-close" id="mobile-menu-button-close">
-                    <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Beranda</a>
-            <a href="#profil" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Profil</a>
-            <a href="#dakwah" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Dakwah</a>
-            <a href="#jadwal" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Jadwal Dakwah</a>
-            <a href="#media" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Media</a>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Beranda</a>
+            <a href="#profil" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Profil</a>
+            <a href="#dakwah" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Dakwah</a>
+            <a href="#jadwal" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white  uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Jadwal Dakwah</a>
+            <a href="#media" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Media</a>
         </div>
     </nav>
 
@@ -69,7 +63,7 @@
     </div>
 
     <section class="container mx-auto mt-10 -z-10">
-        <div id="profil" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+        <div id="profil" class="profile card p-8 rounded-lg mx-5 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 PROFIL
@@ -77,7 +71,7 @@
             <p class="text-gray-600 font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla id bibendum luctus, felis ligula cursus magna, eu tincidunt nibh urna vitae eros. Donec ut ultricies est, sit amet pretium erat. Proin id sem sed neque mattis porta.</p>
         </div>
 
-        <div id="dakwah" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+        <div id="dakwah" class="profile card p-8 rounded-lg mx-5 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 DAKWAH
@@ -89,8 +83,8 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Fikih Kurban</p>
                 </div>
-                <div class="flex flex-col items-center">
-                    <iframe width="300" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
+                <div class="flex flex-col items-center mt-4">
+                    <iframe width="900" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Zakat</p>
@@ -98,7 +92,7 @@
             </div>            
         </div>
         
-        <div id="jadwal" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
+        <div id="jadwal" class="profile card p-8 rounded-lg mx-5 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 JADWAL PENGAJIAN
@@ -194,8 +188,12 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.roti');
             if (window.scrollY > 50) {
+                mobileMenu.classList.add('bg-gray-800')
+                mobileMenu.style = 'color: white !important;'
                 navbar.classList.add('scrolled');
             } else {
+                mobileMenu.classList.add('bg-white')
+                mobileMenu.classList.remove('bg-gray-800')
                 navbar.classList.remove('scrolled');
             }
         });
