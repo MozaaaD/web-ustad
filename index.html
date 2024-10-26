@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-white">
     <nav id="navbar" class="fixed w-full flex justify-center navbar-bg z-[999] transition-all duration-300 ease-in-out">
@@ -22,26 +27,28 @@
                 </div> -->
 
                 <!-- Desktop menu -->
-                <div class="flex justify-center items-center space-x-1" style="z-index: 999999999;">
-                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Beranda</a>
-                    <a href="#profil" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Profil</a>
-                    <a href="#dakwah" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Dakwah</a>
-                    <a href="#jadwal" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Jadwal Dakwah</a>
-                    <a href="#media" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase">Media</a>
+                <div class="flex justify-end items-center space-x-1" style="z-index: 999999999;">
+                    <a href="#" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase hidden md:block">Beranda</a>
+                    <a href="#profil" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Profil</a>
+                    <a href="#dakwah" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Dakwah</a>
+                    <a href="#jadwal" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Jadwal Dakwah</a>
+                    <a href="#media" class="py-5 px-3 font-roboto text-sm font-semibold text-white hover:text-gray-200 uppercase  hidden md:block">Media</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button" id="mobile-menu-button">
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+                <div class="flex justify-end">
+                    <div class="md:hidden flex items-center" style="z-index: 999999999;">
+                        <button class="mobile-menu-button" id="mobile-menu-button">
+                            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white rounded-xl shadow-xl p-4 absolute top-0 left-0 w-full z-20" id="mobile-menu">
+        <div class="mobile-menu hidden md:hidden bg-white rounded-xl shadow-xl p-4 absolute top-16 left-0 w-full z-20" id="mobile-menu">
             <div class="flex justify-between items-center">
                 <button class="mobile-menu-button-close" id="mobile-menu-button-close">
                     <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -49,7 +56,7 @@
                     </svg>
                 </button>
             </div>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">bbb</a>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Beranda</a>
             <a href="#profil" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Profil</a>
             <a href="#dakwah" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Dakwah</a>
             <a href="#jadwal" class="block py-2 px-4 font-roboto text-sm text-gray-700 hover:bg-gray-200 uppercase">Jadwal Dakwah</a>
@@ -75,51 +82,53 @@
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 DAKWAH
             </h2>
-            <div class="mt-4 mx-auto flex justify-center space-x-4">
-                <div>
-                    <iframe width="500" height="315" src="https://www.youtube.com/embed/vCYBm44aG8w?si=MzvtTZFoKFa_mlm8" title="YouTube video player" frameborder="0"
+            <div class="mt-4 mx-auto flex flex-wrap justify-center space-x-4">
+                <div class="flex flex-col items-center">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/vCYBm44aG8w?si=MzvtTZFoKFa_mlm8" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Fikih Kurban</p>
                 </div>
-                <div>
-                    <iframe width="500" height="315" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
+                <div class="flex flex-col items-center">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Zakat</p>
                 </div>
             </div>            
         </div>
-
+        
         <div id="jadwal" class="profile card p-8 rounded-lg mx-20 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 JADWAL PENGAJIAN
             </h2>
-            <table class="min-w-full bg-white">
-                <thead>
-                    <tr class="w-full text-white bg-green-700">
-                        <th class="py-2 px-4 border-b">Tanggal</th>
-                        <th class="py-2 px-4 border-b">Waktu</th>
-                        <th class="py-2 px-4 border-b">Tempat</th>
-                        <th class="py-2 px-4 border-b">Keterangan</th>
-                    </tr>
-                </thead>
-                <tbody class="text-center">
-                    <tr>
-                        <td class="py-2 px-4 border-b">2024-10-30</td>
-                        <td class="py-2 px-4 border-b">19:00</td>
-                        <td class="py-2 px-4 border-b">Masjid Al-Falah</td>
-                        <td class="py-2 px-4 border-b">Pengajian Umum</td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 border-b">2024-11-05</td>
-                        <td class="py-2 px-4 border-b">18:00</td>
-                        <td class="py-2 px-4 border-b">Aula Sekolah</td>
-                        <td class="py-2 px-4 border-b">Kajian Anak</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white max-w-full">
+                    <thead>
+                        <tr class="w-full text-white bg-green-700">
+                            <th class="py-2 px-4 border-b">Tanggal</th>
+                            <th class="py-2 px-4 border-b">Waktu</th>
+                            <th class="py-2 px-4 border-b">Tempat</th>
+                            <th class="py-2 px-4 border-b">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="py-2 px-4 border-b">2024-10-30</td>
+                            <td class="py-2 px-4 border-b">19:00</td>
+                            <td class="py-2 px-4 border-b">Masjid Al-Falah</td>
+                            <td class="py-2 px-4 border-b">Pengajian Umum</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">2024-11-05</td>
+                            <td class="py-2 px-4 border-b">18:00</td>
+                            <td class="py-2 px-4 border-b">Aula Sekolah</td>
+                            <td class="py-2 px-4 border-b">Kajian Anak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <footer class="bg-gray-800 text-white">
