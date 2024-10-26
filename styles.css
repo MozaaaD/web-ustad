@@ -2,6 +2,10 @@ body {
     font-family: 'Poppins', sans-serif; /* Mengatur font untuk seluruh halaman */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar-bg {
     background-image: url('https://mediacenter.riau.go.id/foto_berita/medium/ustadz-abdul-somad-cukup-jadi-manu.jpg');
     background-size: cover;
@@ -39,7 +43,7 @@ body {
     left: 50%; /* Posisikan di tengah horizontal */
     transform: translate(-50%, -50%); /* Geser ke tengah */
     color: rgb(255, 255, 255); /* Ubah warna sesuai kebutuhan */
-    font-size: 3rem; /* Ubah ukuran font sesuai kebutuhan */
+    font-size: 1rem; /* Ubah ukuran font sesuai kebutuhan */
     font-weight: bold; 
     z-index: 1;
     white-space: nowrap; /* Prevent line breaks */
@@ -50,6 +54,7 @@ body {
 
 .profile {
     background-color: #D9D9D9;
+    scroll-margin-top: 80px;
 }
 
 .fade-in {
