@@ -33,7 +33,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="flex justify-end items-center space-x-1" style="z-index: 999999999;">
-                    <button class="mobile-menu-button" id="mobile-menu-button">
+                    <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Open menu">
                         <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -43,18 +43,19 @@
         </div>
         <!-- Mobile menu -->
         <div class="mobile-menu hidden md:hidden fixed bg-white rounded-xl shadow-xl p-4 left-0 w-full z-20" id="mobile-menu">
-            <div class="flex justify-between items-center">
-                <button class="mobile-menu-button-close" id="mobile-menu-button-close">
-                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="flex justify-between items-center mb-2">
+                <span class="font-bold text-lg text-black">Menu</span>
+                <button class="mobile-menu-button-close" id="mobile-menu-button-close" aria-label="Close menu">
+                    <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
-            <a href="#" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Beranda</a>
-            <a href="#profil" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Profil</a>
-            <a href="#dakwah" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Dakwah</a>
-            <a href="#jadwal" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white  uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Jadwal Dakwah</a>
-            <a href="#media" class="block py-2 px-4 font-roboto text-sm text-white hover:text-gray-700 hover:bg-white uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Media</a>
+            <a href="#" class="block py-2 px-4 font-roboto text-sm text-black hover:text-gray-500 hover:bg-gray-200 uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Beranda</a>
+            <a href="#profil" class="block py-2 px-4 font-roboto text-sm text-black hover:text-gray-500 hover:bg-gray-200 uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Profil</a>
+            <a href="#dakwah" class="block py-2 px-4 font-roboto text-sm text-black hover:text-gray-500 hover:bg-gray-200 uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Dakwah</a>
+            <a href="#jadwal" class="block py-2 px-4 font-roboto text-sm text-black hover:text-gray-500 hover:bg-gray-200 uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Jadwal Dakwah</a>
+            <a href="#media" class="block py-2 px-4 font-roboto text-sm text-black hover:text-gray-500 hover:bg-gray-200 uppercase" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Media</a>
         </div>
     </nav>
 
@@ -188,12 +189,11 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.roti');
             if (window.scrollY > 50) {
-                mobileMenu.classList.add('bg-gray-800')
-                mobileMenu.style = 'color: white !important;'
+                mobileMenu.classList.add('bg-gray-200');
+                mobileMenu.style.color = 'white';
                 navbar.classList.add('scrolled');
             } else {
-                mobileMenu.classList.add('bg-white')
-                mobileMenu.classList.remove('bg-gray-800')
+                mobileMenu.classList.remove('bg-gray-800');
                 navbar.classList.remove('scrolled');
             }
         });

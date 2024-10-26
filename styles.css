@@ -8,7 +8,7 @@ html {
 
 .navbar-bg {
     background-image: url('https://mediacenter.riau.go.id/foto_berita/medium/ustadz-abdul-somad-cukup-jadi-manu.jpg');
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     position: relative;
     height: 100vh; /* Tinggi tetap 100vh */
@@ -43,13 +43,12 @@ html {
     left: 50%; /* Posisikan di tengah horizontal */
     transform: translate(-50%, -50%); /* Geser ke tengah */
     color: rgb(255, 255, 255); /* Ubah warna sesuai kebutuhan */
-    font-size: 1rem; /* Ubah ukuran font sesuai kebutuhan */
+    font-size: 1.5rem; /* Ubah ukuran font sesuai kebutuhan */
     font-weight: bold; 
     z-index: 1;
     white-space: nowrap; /* Prevent line breaks */
     overflow: hidden; /* Hide overflow */
     text-align: center; /* Center text */
-
 }
 
 .profile {
@@ -75,6 +74,7 @@ html {
 .pengajian {
     background-color: #f2f2f2; /* Warna latar belakang untuk kartu pengajian */
 }
+
 .scrolled {
     background-color: #333333; /* Latar belakang gelap saat di-scroll */
     position: fixed;
