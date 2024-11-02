@@ -14,7 +14,7 @@
     </style>
 </head>
 <body class="bg-white">
-    <nav id="navbar" class="fixed w-full flex justify-center navbar-bg z-[999] transition-all duration-300 ease-in-out">
+    <nav id="navbar" class="fixed w-full  justify-center navbar-bg z-[999] transition-all duration-300 ease-in-out">
         <div class="roti">
             <div class="flex justify-between items-center z-[999] w-full">
                 <!-- Logo Text -->
@@ -32,9 +32,9 @@
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="flex justify-end items-center space-x-1" style="z-index: 999999999;">
+                <div class="flex justify-between items-center space-x-1" style="z-index: 999999999;">
                     <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Open menu">
-                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="w-6 h-6   md:hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
@@ -45,8 +45,8 @@
         <div class="mobile-menu hidden md:hidden fixed bg-white rounded-xl shadow-xl p-4 left-0 w-full z-20" id="mobile-menu">
             <div class="flex justify-between items-center mb-2">
                 <span class="font-bold text-lg text-black">Menu</span>
-                <button class="mobile-menu-button-close" id="mobile-menu-button-close" aria-label="Close menu">
-                    <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button class="mobile-menu-button-close " id="mobile-menu-button-close" aria-label="Close menu">
+                    <svg class="w-6 h-6 text-black "  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -72,20 +72,41 @@
             <p class="text-gray-600 font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla id bibendum luctus, felis ligula cursus magna, eu tincidunt nibh urna vitae eros. Donec ut ultricies est, sit amet pretium erat. Proin id sem sed neque mattis porta.</p>
         </div>
 
-        <div id="dakwah" class="profile card p-8 rounded-lg mx-5 mb-20 fade-in">
+        <div id="dakwah" class="profile card p-8 rounded-lg mx-4 mb-20 fade-in">
             <h2 class="text-2xl font-bold text-center text-green-700 mb-4 relative">
                 <span class="absolute inset-x-0 bottom-0 border-b-2 border-black"></span>
                 DAKWAH
             </h2>
-            <div class="mt-4 mx-auto flex flex-wrap justify-center space-x-4">
+            <!-- dekstop video -->
+            <div class="mt-4 mx-auto  grid-cols-3 justify-center hidden md:grid space-x-4">
                 <div class="flex flex-col items-center">
                     <iframe width="300" height="250" src="https://www.youtube.com/embed/vCYBm44aG8w?si=MzvtTZFoKFa_mlm8" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Fikih Kurban</p>
                 </div>
-                <div class="flex flex-col items-center mt-4">
-                    <iframe width="900" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
+                <div class="flex flex-col items-center ">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
+                    <p class="text-gray-600 font-bold mt-2">Zakat</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/8TbNb_CP8n8?si=h_SyiQK5etDwZABa" title="YouTube video player" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="text-gray-600 font-bold mt-2">Tausiyah</p>
+                </div>
+            </div>   
+            <!-- mobile video -->
+            <div class="mt-4 mx-auto  flex-wrap justify-center  md:hidden ">
+                <div class="flex flex-col items-center">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/vCYBm44aG8w?si=MzvtTZFoKFa_mlm8" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
+                    <p class="text-gray-600 font-bold mt-2">Fikih Kurban</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <iframe width="250" height="250" src="https://www.youtube.com/embed/HL-IkVfkNlY?si=okdQ4yp4VKrIJfMO" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full max-w-xs"></iframe>
                     <p class="text-gray-600 font-bold mt-2">Zakat</p>
@@ -150,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center py-4 bg-gray-700">
+            <div class="text-center py-4 " style="background-color : #1f2937;">
                 <p class="text-sm">&copy; 2024 Ust. Abu Bakar. All rights reserved.</p>
             </div>
         </footer>
